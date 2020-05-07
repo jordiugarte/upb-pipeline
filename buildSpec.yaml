@@ -1,0 +1,16 @@
+    pre_build:
+        commands:
+            - echo pre-build
+            
+    build:
+        commands:
+            - ./deploy.sh
+            
+    post_build:
+        commands:
+            - echo post_build
+            
+artifacts:
+    files:
+        - template.yaml
+    name: upbCodepipeline
