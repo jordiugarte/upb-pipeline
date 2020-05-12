@@ -1,15 +1,19 @@
-    pre_build:
+version: 0.2
+phases:
+    install:
+        runtime-versions:
+            python: 3.7
         commands:
-            - echo pre-build
-            
-    build:
-        commands:
-            - ./deploy.sh
-            
-    post_build:
-        commands:
-            - echo post_build
-            
+            - echo install
+        pre_build:
+            commands:
+                - echo pre-build
+        build:
+            commands:
+                - echo build
+        post_build:
+            commands:
+                - echo post-build
 artifacts:
     files:
         - template.yaml
